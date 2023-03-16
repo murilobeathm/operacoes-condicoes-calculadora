@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações Condicionais</title>
+
+    <style>
+        #div1{
+            padding-top: 50px;
+        }
+
+        #button{
+            margin-left: 117px;
+        }
+    </style>
+</head>
+<body>
+    <input name="campo1" id="campo1" type="text">
+    <button onclick="addMensagem()">botão</button>
+
+    <div>
+        
+    </div>
+
+    <div id="div1">
+
+        Primeiro número: <input type="number" id="num1"> Segundo Número: <input type="number" id="num2">
+        <p id="button"><button onclick="somar()">+</button> <button onclick="subtrair()">-</button> <button onclick="multiplicar()">*</button> <button onclick="dividir()">/</button></p>
+        <p>Resultado <span></span></p>
+        
+    </div>
+    
+    <script type="text/javascript">
+            var var1 = document.querySelector('#num1');
+            var var2 = document.querySelector('#num2');
+            var resul = document.querySelector('span');
+
+
+        function addMensagem() {
+
+            var var1 = +document.getElementById('campo1').value;
+            if (var1 == "") {
+                alert('O campo necessita de estar preenchido');
+            }
+            
+        }
+            
+            function somar(){
+                resul.innerHTML = parseFloat(num1.value) + parseFloat(num2.value);
+            }
+
+            function subtrair(){
+                resul.innerHTML = parseFloat(num1.value) - parseFloat(num2.value);
+            }
+
+            function multiplicar(){
+                resul.innerHTML = parseFloat(num1.value) * parseFloat(num2.value);
+            }
+
+            function dividir(){
+                resul.innerHTML = parseFloat(num1.value) / parseFloat(num2.value);
+            }
+
+    </script>
+</body>
+</html>
